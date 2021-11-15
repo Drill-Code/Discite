@@ -1,0 +1,32 @@
+{
+  "name": "project-disco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elvencedor/Project-Disco.git"
+  },
+  "author": "Elvencedor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elvencedor/Project-Disco/issues"
+  },
+  "homepage": "https://github.com/Elvencedor/Project-Disco#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "nodemon": "^2.0.15"
+  }
+}
