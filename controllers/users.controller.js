@@ -13,6 +13,21 @@ const create = async (req, res) => {
   }
 };
 
+const update = async (req, res, next) => {
+  try {
+      const id = req.params.id;
+      const updates = req.body
+      const result = await User.findByIdAndUpdate(id, updates);
+      return res.status(200).json({result});
+
+  } catch (error) {
+    logger.error('An error occurred updating user.');
+    logger.error(error);
+    return res.status(500).json(error);
+  }
+}
+
 module.exports = {
   create,
+  update
 };
