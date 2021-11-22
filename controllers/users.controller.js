@@ -15,10 +15,10 @@ const create = async (req, res) => {
 
 const update = async (req, res, next) => {
   try {
-      const id = req.params.id;
-      const updates = req.body
-      const result = await User.findByIdAndUpdate(id, updates);
-      return res.status(200).json({result});
+      const {params, body} = req;
+      const {id} = params;
+      const user = await User.findByIdAndUpdate( id, body );
+      return res.status(200).json({user});
 
   } catch (error) {
     logger.error('An error occurred updating user.');

@@ -6,7 +6,7 @@ const validateUpdateUser = async (req, res, next) => {
     first_name: joi.string(),
     last_name: joi.string(),
     email: joi.string(),
-    phone: joi.string().optional(),
+    phone: joi.string(),
     country: joi.string(),
     state: joi.string(),
     zip_code: joi.string(),
