@@ -27,7 +27,22 @@ const update = async (req, res, next) => {
   }
 }
 
+const fetchUser = async (req, res, next) => {
+  try {
+      const {params} = req;
+      const {id} = params;
+      const user = await User.findById( id );
+      return res.status(200).json({user});
+
+  } catch (error) {
+    logger.error('An error occurred fetching user.');
+    logger.error(error);
+    return res.status(500).json(error);
+  }
+}
+
 module.exports = {
   create,
-  update
+  update,
+  fetchUser,
 };
